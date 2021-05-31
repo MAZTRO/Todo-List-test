@@ -45,13 +45,7 @@ export const signin = async (req: Request, res: Response) => {
     expiresIn: 60 * 60 * 24
   })
 
-  res.cookie('jwt', token, { sameSite: true, secure: true, maxAge: 60 * 60 * 24 })
-  res.header('auth-token', token).json(user)
-}
-
-export const logOut = async (req: Request, res: Response) => {
-  res.cookie('jwt', '', { maxAge: 1 })
-  res.redirect('/');
+  res.json({user, jwt: token})
 }
 
 export const profile = async (req: Request, res: Response) => {

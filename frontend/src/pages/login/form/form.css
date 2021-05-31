@@ -1,0 +1,230 @@
+.formContainer {
+  width: 60%;
+
+  display: flex;
+
+  margin: auto auto 0 auto;
+  padding: 5vw 2vw;
+
+  background: rgba( 0, 0, 0, 0.5 );
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.formContainer .form {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.formContainer .loanding {
+  width: 20vw;
+  height: 20vw;
+
+  margin: auto;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-image: url('../../../images/loanding.png');
+
+  z-index: 10;
+
+  animation: rotate infinite 1.5s linear;
+  animation-play-state: running;
+  -moz-animation-play-state:running;
+}
+.formContainer .loanding:hover {
+  animation: rotate infinite 1s linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.formContainer .form .inputContainer {
+  position: relative;
+  width: 100%;
+
+  margin: auto;
+
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.formContainer .form .inputContainer p.warning {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  color: #FFF;
+  margin: auto;
+  font-weight: 600;
+  z-index: 1000;
+}
+
+.formContainer .form input {
+  width: 70%;
+
+  margin: 10px auto;
+  padding: 10px 3vw;
+
+  border: none;
+  border-bottom: 1px solid #0386FE;
+  outline: none;
+  background-color: transparent;
+
+  text-align: center;
+  font-size: 1.5vw;
+  color: #FFF;
+  font-weight: 300;
+
+  z-index: 10;
+}
+
+.formContainer .form input::placeholder {
+  color: #AAA;
+}
+
+.formContainer .form input:-webkit-autofill {
+  border: 1px solid #0386FE;
+  -webkit-text-fill-color: #0386FE;
+  -webkit-box-shadow: 0 0 0px 10000px #FAFAFA inset;
+  box-shadow: 0 0 0px 10000px #FFF inset;
+}
+
+/* ======================================= */
+
+.formContainer .form .btnSubmit {
+  width: 65%;
+
+  background-color: #40EBC2;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  color: #FFF;
+  font-size: 1.4vw;
+  font-weight: 100;
+
+  margin: 10px auto;
+  padding: 10px 3vw;
+
+  cursor: pointer;
+
+  transition: .5s;
+}
+.formContainer .form .btnSubmit:hover {
+  background-color: #0386FE;
+}
+
+/* ============================================= */
+/* ============================================= */
+
+.formContainer .errorMsg {
+  width: 60%;
+
+  margin: auto;
+  padding: 20px;
+
+  background-color: #0386FE;
+  border-radius: 20px;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.formContainer .errorMsg h2 {
+  margin: auto;
+
+  text-align: center;
+  font-size: 3vw;
+  text-transform: uppercase;
+  color: #FFF;
+}
+
+.formContainer .errorMsg .back {
+  padding: 10px 30px;
+  margin: 20px auto;
+
+  background-color: #FFF;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  color: #0386FE;
+  font-weight: 600;
+  font-size: 2vw;
+
+  cursor: pointer;
+}
+
+/* ====================================== */
+/* ====================================== */
+/* ====================================== */
+
+
+@media (max-width: 1024px) {
+  .formContainer {
+    width: 90%;
+  }
+
+  .formContainer .form h1 {
+    font-size: 4.3vw;
+    line-height: 4.3vw;
+  }
+
+  .formContainer .form .subtitle {
+    margin-bottom: 2vw;
+
+    font-size: 4.1vw;
+    line-height: 4.1vw;
+  }
+
+  .formContainer .form input {
+    width: 55.5%;
+    padding: 10px 3vw;
+    font-size: 2.6vw;
+  }
+
+  .formContainer .form .btnSubmit {
+    font-size: 2.7vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .formContainer .form h1 {
+    font-size: 6.3vw;
+    line-height: 6.3vw;
+  }
+
+  .formContainer .form .subtitle {
+    margin-bottom: 2vw;
+
+    font-size: 6.1vw;
+    line-height: 6.1vw;
+  }
+
+  .formContainer .form input {
+    width: 60%;
+    padding: 5px 3vw;
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+
+  .formContainer .form .btnSubmit {
+    font-size: 4vw;
+  }
+}

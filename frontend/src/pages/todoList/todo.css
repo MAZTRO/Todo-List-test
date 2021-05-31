@@ -1,0 +1,311 @@
+.todoContainer {
+  width: 100vw;
+  height: 100vh;
+
+  margin: auto;
+
+  display: flex;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('../../images/bgImage.png');
+
+  overflow: hidden;
+}
+
+.todoContainer .container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-flow: column;
+
+  background: rgba( 0, 0, 0, 0.5 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 4.5px );
+  -webkit-backdrop-filter: blur( 4.5px );
+}
+
+/* ==================================== */
+
+.todoContainer .container header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 90%;
+  height: 80px;
+
+  padding: 0% 5%;
+
+  background-color: #FFF2;
+  border-bottom: 1px solid #CCC;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todoContainer .container header h1 {
+  margin: auto 0%;
+
+  color: #FFF;
+  font-size: 2vw;
+  font-weight: 300;
+}
+
+.todoContainer .container header .userInfoBtn {
+  width: 70px;
+  height: 70px;
+
+  border-radius: 200px;
+
+  border: none;
+  outline: none;
+
+  background-color: #FFF;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url('../../images/userICon.png');
+
+  cursor: pointer;
+}
+
+/* ================================ */
+
+.todoContainer .userInfoCont {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  width: 50%;
+  height: 100vh;
+
+  z-index: 100;
+
+  background: rgba( 0, 0, 0, 0.5 );
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+
+  display: flex;
+  flex-flow: column;
+}
+
+.todoContainer .userInfoCont .close {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+
+  width: 3vw;
+  height: 3vw;
+
+  background-color: #40EBC2;
+  border-radius: 200px;
+  color: #FFF;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  transition: .5s;
+}
+
+.todoContainer .userInfoCont .close:hover {
+  background-color: #0386FE;
+}
+
+.todoContainer .userInfoCont .logOut {
+  background-color: #40EBC2;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  color: #FFF;
+  font-size: 1.5vw;
+  font-weight: 100;
+
+  margin: 10px auto;
+  padding: 5px 3vw;
+
+  cursor: pointer;
+
+  transition: .5s;
+}
+.todoContainer .userInfoCont .logOut:hover {
+  background-color: #0386FE;
+}
+
+.todoContainer .userInfoCont .delete {
+  background-color: #FFF0;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+
+  color: rgb(252, 34, 125);
+  font-size: 1.3vw;
+  font-weight: 300;
+
+  margin: 10px auto;
+  padding: 10px 3vw;
+
+  cursor: pointer;
+
+  transition: .5s;
+}
+.todoContainer .userInfoCont .delete:hover {
+  transform: scale(1.05);
+}
+
+/* ======================================================= */
+
+.todoContainer .container .body {
+  width: 100%;
+  height: calc(100vh - 90px);
+
+  margin: 90px auto auto auto;
+
+  display: flex;
+  flex-flow: column;
+
+  scrollbar-width: thin;
+  scrollbar-color: #40EBC2 transparent;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.todoContainer .container .body::-webkit-scrollbar {
+  width: 8px; height: 8px;
+}
+.todoContainer .container .body::-webkit-scrollbar-track {
+  background: transparent;
+}
+.todoContainer .container .body::-webkit-scrollbar-thumb {
+  background: #40EBC2;
+}
+.todoContainer .container .body::-webkit-scrollbar-thumb:hover {
+  background: #0386FE;
+}
+
+.todoContainer .container .body .form {
+  width: 80%;
+
+  margin: 5% auto;
+
+  display: flex;
+
+  background-color: #FFF4;
+}
+
+.todoContainer .container .body .form input {
+  width: 70%;
+
+  margin: 10px auto;
+  padding: 10px 3vw;
+
+  border: none;
+  border-bottom: 1px solid #0386FE;
+  outline: none;
+  background-color: transparent;
+
+  text-align: center;
+  font-size: 1.5vw;
+  color: #FFF;
+  font-weight: 300;
+
+  z-index: 10;
+}
+
+.todoContainer .container .body .form input::placeholder {
+  color: #AAA;
+}
+
+.todoContainer .container .body .form button {
+  width: 3.5vw;
+  height: 3.5vw;
+
+  margin: auto;
+
+  border-radius: 200px;
+  border: none;
+  outline: none;
+
+  background-color: #FFF;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-image: url('../../images/sendIcon.png');
+
+  transition: .5s;
+
+  cursor: pointer;
+}
+
+.todoContainer .container .body .form button:hover {
+  background-color: #40EBC2;
+}
+
+/* ================================== */
+
+.todoContainer .container .body .listCont {
+  width: 80%;
+
+  margin: 10px auto auto auto;
+
+  background-color: #FFF2;
+
+  display: flex;
+  flex-flow: column;
+}
+
+.todoContainer .container .body .listCont .todoCont {
+  width: 90%;
+
+  display: flex;
+  align-items: center;
+
+  margin: 10px auto;
+
+  border-bottom: 1px solid #0386FE;
+}
+
+.todoContainer .container .body .listCont .todoCont h2 {
+  margin: 10px auto auto 2%;
+
+  color: #FFF;
+  font-size: 1.5;
+  font-weight: 100;
+}
+
+.todoContainer .container .body .listCont .todoCont input[type="checkbox"] {
+  display: block;
+
+  width: 2vw;
+  height: 2vw;
+
+  margin: auto 10px;
+
+  cursor: pointer;
+}
+
+.todoContainer .container .body .listCont .todoCont .edit {
+  margin: auto 10px;
+
+  font-size: 2vw;
+  color: #FFF;
+
+  cursor: pointer;
+}
+
+.todoContainer .container .body .listCont .todoCont .delete {
+  margin: auto 10px;
+
+  font-size: 1.2vw;
+  color: rgb(252, 34, 125);
+
+  cursor: pointer;
+}
